@@ -1,0 +1,10 @@
+import express from 'express';
+import { createComment, deleteComment, getCommentsByIdMovie, likeComment, updateComment } from '../controller/CommentsController.js';
+import { verifyToken } from '../middleware/auth.js';
+const router = express.Router();
+router.get('/comments/movie/:id_movie',verifyToken,getCommentsByIdMovie);
+router.post('/create/comment',verifyToken,createComment);
+router.put('/comments/like/:id', verifyToken, likeComment);
+router.delete('/delete/comment/:id', verifyToken, deleteComment);
+router.put('/up/comment/:id', verifyToken, updateComment);
+export default router;
