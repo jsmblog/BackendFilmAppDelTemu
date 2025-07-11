@@ -13,7 +13,7 @@ app.use(cors({
     origin:[
     'http://localhost:8100/api',
     'https://film-app-jsm.netlify.app',
-    'https://filmapp-c9a6b.web.app'
+    'https://filmapp-c9a6b.web.app',
     'http://192.168.0.143:8100',],
     methods: ['GET', 'POST', 'PUT', 'DELETE','OPTIONS'],
 }));
